@@ -27,7 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin123:admin%40123@cluster0.ncks5pg.mongodb.net/userDB1", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB, {useNewUrlParser: true});
 // mongoose.connect("mongodb://127.0.0.1:27017/userDB1", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
 
